@@ -1,0 +1,202 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base App Container */
+.app {
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding: 2rem;
+}
+
+/* Theme: Light */
+.light {
+  background: linear-gradient(to bottom, #f9fafb, #f1f5f9);
+  color: #111827;
+}
+
+.light .hero-section {
+  background: linear-gradient(135deg, #c4b5fd, #f9a8d4, #a5f3fc);
+  color: #1e293b;
+}
+
+.light .alt-section {
+  background-color: #e0f2fe;
+  border-radius: 12px;
+}
+
+/* Theme: Dark */
+.dark {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+.dark .hero-section {
+  background: linear-gradient(135deg, #1e293b, #334155, #475569);
+  color: #f8fafc;
+}
+
+.dark .alt-section {
+  background-color: #1e293b;
+  border-radius: 12px;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toggle Button */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.mode-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Sections */
+.section {
+  margin: 3rem 0;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Cards & Projects */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card, .card .card-content {
+  background: inherit;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tech-stack {
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+  background-color: #cbd5e1;
+}
+
+.dark .skills li {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.dark .skills li:hover {
+  background-color: #475569;
+}
+
+/* Contact Section */
+.contact .icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact .icons a {
+  font-size: 1.8rem;
+  color: inherit;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact .icons a:hover {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
